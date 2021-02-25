@@ -3,30 +3,30 @@
 ## Heap Exploitation Techniques
 
 | Name | Description | Reference |
-|---|:---:|---:|
-|Fast bin dup | Corrupting a fast bin freelist (e.g., by double free or write-after-free) to return an arbitrary location |---:|
-|  Unsafe unlink | Abusing unlinking in a freelist to get arbitrary write |---:|
-| House of spirit | Freeing a fake chunk of fast bin to return arbitrary location |---:|
-| Poison null byte |  Corrupting heap chunk size to consolidate chunks even in the presence of allocated heap |---:|
-| House of lore | Abusing the small bin freelist to return an arbitrary location |---:|
-| Overlapping chunks |  Corrupting a chunk size in the unsorted bin to overlap with an allocated heap |---:|
-| House of force |  Corrupting the top chunk to return an arbitrary location |---:|
-| Unsorted bin attack | Corrupting a freed chunk in unsorted bin to write a uncontrollable value to arbitrary location  |---:|
-|House of einherja |Corrupting PREV_IN_USE to consolidate chunks to return an arbitrary location that requires a heap address |[14]|
-|Unsorted bin into stack |  Abusing the unsorted freelist to return an arbitrary location |[16]|
-| House of unsorted einherjar | A variant of house of einherjar that does not require a heap address  |[16]|
-|  Unaligned double free | Corrupting a small bin freelist to return already allocated heap  |[16]|
-|Overlapping small chunks |  Corrupting a chunk size in a small bin to overlap chunks |[16]|
-|Fast bin into other bin | Corrupting a fast bin freelist and use malloc_consolidate() to return an arbitrary non-fast-bin chunk |[16]|
+|---|:---|---:|
+|`Fast bin dup` | Corrupting a fast bin freelist (e.g., by double free or write-after-free) to return an arbitrary location |---:|
+|  `Unsafe unlink` | Abusing unlinking in a freelist to get arbitrary write |---:|
+| `House of spirit` | Freeing a fake chunk of fast bin to return arbitrary location |---:|
+| `Poison null byte` |  Corrupting heap chunk size to consolidate chunks even in the presence of allocated heap |---:|
+| `House of lore` | Abusing the small bin freelist to return an arbitrary location |---:|
+| `Overlapping chunks` |  Corrupting a chunk size in the unsorted bin to overlap with an allocated heap |---:|
+| `House of force` |  Corrupting the top chunk to return an arbitrary location |---:|
+| `Unsorted bin attack` | Corrupting a freed chunk in unsorted bin to write a uncontrollable value to arbitrary location  |---:|
+|`House of einherja` |Corrupting PREV_IN_USE to consolidate chunks to return an arbitrary location that requires a heap address |[14]|
+|`Unsorted bin into stack` |  Abusing the unsorted freelist to return an arbitrary location |[16]|
+|`House of unsorted einherjar` | A variant of house of einherjar that does not require a heap address  |[16]|
+|`Unaligned double free` | Corrupting a small bin freelist to return already allocated heap  |[16]|
+|`Overlapping small chunks` |  Corrupting a chunk size in a small bin to overlap chunks |[16]|
+|`Fast bin into other bin` | Corrupting a fast bin freelist and use malloc_consolidate() to return an arbitrary non-fast-bin chunk |[16]|
 
 
 ## Secure Heap Allocator Design
-- Berger, Emery D., and Benjamin G. Zorn. "DieHard: Probabilistic memory safety for unsafe languages." Acm sigplan notices 41.6 (2006): 158-168.
-- Novark, Gene, and Emery D. Berger. "DieHarder: securing the heap." Proceedings of the 17th ACM conference on Computer and communications security. 2010.
+- Berger, Emery D., and Benjamin G. Zorn. `"DieHard: Probabilistic memory safety for unsafe languages."` Acm sigplan notices 41.6 (2006): 158-168.
+- Novark, Gene, and Emery D. Berger. `"DieHarder: securing the heap."` Proceedings of the 17th ACM conference on Computer and communications security. 2010.
 
 ## Reading
 | # | Year | Title | Review |
-|---|:---:|---:|---:|
+|---|:---:|:---|---:|
 | 1 | 2001 | [Vudo malloc tricks](http://phrack.org/issues/57/8.html) |  |
 | 2 | 2001 | [Once upon a free()...](http://phrack.org/issues/57/9.html) |  |
 | 3 | 2003 | [Advanced Doug lea’s malloc exploits](http://phrack.org/issues/61/6.html) |  |
