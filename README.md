@@ -5,7 +5,7 @@
 | Name | Description | Reference |
 |---|:---|---:|
 |`Fast bin dup` | Corrupting a fast bin freelist (e.g., by double free or write-after-free) to return an arbitrary location |---:|
-|  `Unsafe unlink` | Abusing unlinking in a freelist to get arbitrary write |---:|
+|  `Unsafe unlink` | Abusing unlinking in a freelist to get arbitrary write |[1][2][3]|
 | `House of chaos` |  |[5]|
 | `House of mind` |  |[5][8]|
 | `House of prime` |  |[5][8]|
