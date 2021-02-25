@@ -6,14 +6,18 @@
 |---|:---|---:|
 |`Fast bin dup` | Corrupting a fast bin freelist (e.g., by double free or write-after-free) to return an arbitrary location |---:|
 |  `Unsafe unlink` | Abusing unlinking in a freelist to get arbitrary write |---:|
-| `House of prime` |  |[8]|
 | `House of mind` |  |[8]|
+| `House of prime` |  |[8]|
+| `House of spirit` | Freeing a fake chunk of fast bin to return arbitrary location |[8]|
 | `House of force` |  Corrupting the top chunk to return an arbitrary location |[8]|
 | `House of lore` | Abusing the small bin freelist to return an arbitrary location |[8]|
-| `House of spirit` | Freeing a fake chunk of fast bin to return arbitrary location |[8]|
+| `House of underground` |  |[8]|
 | `Poison null byte` |  Corrupting heap chunk size to consolidate chunks even in the presence of allocated heap |---:|
 | `Overlapping chunks` |  Corrupting a chunk size in the unsorted bin to overlap with an allocated heap |---:|
 | `Unsorted bin attack` | Corrupting a freed chunk in unsorted bin to write a uncontrollable value to arbitrary location  |---:|
+|`Free chunk enlarge attack` | |[13]|
+|`Nonadjacent free chunk consolidation attack` | |[13]|
+|`Free chunk shrink attack` | |[13]|
 |`House of einherja` |Corrupting PREV_IN_USE to consolidate chunks to return an arbitrary location that requires a heap address |[14]|
 |`Unsorted bin into stack` |  Abusing the unsorted freelist to return an arbitrary location |[16]|
 |`House of unsorted einherjar` | A variant of house of einherjar that does not require a heap address  |[16]|
@@ -36,7 +40,7 @@
 | 5 | 2007 | [The use of set_head to defeat the wilderness](http://phrack.org/issues/64/9.html) |  |
 | 6 | 2007 | [Understanding the heap by breaking it](https://www.exploit-db.com/download/17249) |  |
 | 7 | 2009 | [Yet another free() exploitation technique](http://phrack.org/issues/66/6.html) |  |
-| 8 | 2009 | [Malloc Des-Maleficarum](http://phrack.org/issues/) |  |
+| 8 | 2009 | [Malloc Des-Maleficarum](http://phrack.org/issues/66/10.html) |  |
 | 9 | 2010 |  [The house of lore: Reloaded](http://phrack.org/issues/67/8.html) |  |
 | 10 | 2014 | [The poisoned NUL byte, 2014 edition](https://googleprojectzero.blogspot.com/2014/08/the-poisoned-nul-byte-2014-edition.html) |  |
 | 11 | 2015 |[Glibc adventures: The forgotten chunk](https://www.contextis.com/en/resources/white-papers/glibc-adventures-the-forgotten-chunks) |  |
