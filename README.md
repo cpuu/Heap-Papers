@@ -38,7 +38,7 @@
 | 2 | 2001 | [Once upon a free()...](http://phrack.org/issues/57/9.html) |  |
 | 3 | 2003 | [Advanced Doug lea’s malloc exploits](http://phrack.org/issues/61/6.html) |  |
 | 4 | 2004 | [Exploiting the wilderness](https://seclists.org/vuln-dev/2004/Feb/25) |  |
-| 5 | 2005 | [The Malloc Maleficarum](https://dl.packetstormsecurity.net/papers/attack/MallocMaleficarum.txt) |  |
+| 5 | 2005 | [The Malloc Maleficarum](https://seclists.org/bugtraq/2005/Oct/118) |  |
 | 6 | 2007 | [The use of set_head to defeat the wilderness](http://phrack.org/issues/64/9.html) |  |
 | 7 | 2007 | [Understanding the heap by breaking it](https://www.exploit-db.com/download/17249) |  |
 | 8 | 2009 | [Yet another free() exploitation technique](http://phrack.org/issues/66/6.html) |  |
