@@ -7,12 +7,12 @@
 |`Fast bin dup` | Corrupting a fast bin freelist (e.g., by double free or write-after-free) to return an arbitrary location |---:|
 |  `Unsafe unlink` | Abusing unlinking in a freelist to get arbitrary write |[1][2][3]|
 | `House of chaos` |  |[5]|
-| `House of mind` |  |[5][8]|
-| `House of prime` |  |[5][8]|
-| `House of spirit` | Freeing a fake chunk of fast bin to return arbitrary location |[5][8]|
-| `House of force` |  Corrupting the top chunk to return an arbitrary location |[5][8]|
-| `House of lore` | Abusing the small bin freelist to return an arbitrary location |[5][8]|
-| `House of underground` |  |[8]|
+| `House of mind` |  |[5][9]|
+| `House of prime` |  |[5][9]|
+| `House of spirit` | Freeing a fake chunk of fast bin to return arbitrary location |[5][9]|
+| `House of force` |  Corrupting the top chunk to return an arbitrary location |[5][9]|
+| `House of lore` | Abusing the small bin freelist to return an arbitrary location |[5][9]|
+| `House of underground` |  |[9]|
 | `Poison null byte` |  Corrupting heap chunk size to consolidate chunks even in the presence of allocated heap |---:|
 | `Overlapping chunks` |  Corrupting a chunk size in the unsorted bin to overlap with an allocated heap |---:|
 | `Unsorted bin attack` | Corrupting a freed chunk in unsorted bin to write a uncontrollable value to arbitrary location  |---:|
