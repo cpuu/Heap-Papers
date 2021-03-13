@@ -20,11 +20,11 @@
 |`Nonadjacent free chunk consolidation attack` | |[14]|
 |`Free chunk shrink attack` | |[14]|
 |`House of einherja` |Corrupting PREV_IN_USE to consolidate chunks to return an arbitrary location that requires a heap address |[15]|
-|`Unsorted bin into stack` |  Abusing the unsorted freelist to return an arbitrary location |[17]|
-|`House of unsorted einherjar` | A variant of house of einherjar that does not require a heap address  |[17]|
-|`Unaligned double free` | Corrupting a small bin freelist to return already allocated heap  |[17]|
-|`Overlapping small chunks` |  Corrupting a chunk size in a small bin to overlap chunks |[17]|
-|`Fast bin into other bin` | Corrupting a fast bin freelist and use malloc_consolidate() to return an arbitrary non-fast-bin chunk |[17]|
+|`Unsorted bin into stack` |  Abusing the unsorted freelist to return an arbitrary location |[18]|
+|`House of unsorted einherjar` | A variant of house of einherjar that does not require a heap address  |[18]|
+|`Unaligned double free` | Corrupting a small bin freelist to return already allocated heap  |[18]|
+|`Overlapping small chunks` |  Corrupting a chunk size in a small bin to overlap chunks |[18]|
+|`Fast bin into other bin` | Corrupting a fast bin freelist and use malloc_consolidate() to return an arbitrary non-fast-bin chunk |[18]|
 
 
 ## Secure Heap Allocator Design
@@ -49,5 +49,6 @@
 | 13 | 2016 | [Ptmalloc fanzine](http://tukan.farm/2016/07/26/ptmalloc-fanzine/) |  
 | 14 | 2016 | [New exploit methods against Ptmalloc of Glibc](https://loccs.sjtu.edu.cn/~romangol/publications/trustcom16.pdf)|  
 | 15 | 2016 | [House of Einherjar](https://github.com/st4g3r/House-of-Einherjar-CB2016) |  
-| 16 | 2018 | [HeapHopper](https://www.usenix.org/conference/usenixsecurity18/presentation/eckert) |  
-| 17 | 2020 | [ArcHeap](https://github.com/sslab-gatech/ArcHeap) |  
+| 16 | 2017 | Modular Synthesis of Heap Exploits |
+| 17 | 2018 | [HeapHopper](https://www.usenix.org/conference/usenixsecurity18/presentation/eckert) |  
+| 18 | 2020 | [ArcHeap](https://github.com/sslab-gatech/ArcHeap) |  
